@@ -86,7 +86,7 @@
 <script>
     let display = document.getElementById('display');
     let currentExpression = '';
-    let exhaustSound = document.getElementById('exhaustSound');
+    let clickSound = document.getElementById('clickSound');
 
     function appendValue(value) {
         if (currentExpression === '0') currentExpression = '';
@@ -108,7 +108,7 @@
         try {
             currentExpression = eval(currentExpression).toString();
             updateDisplay();
-            exhaustSound.play();
+            clickSound.play();
         } catch (error) {
             display.innerText = 'Ошибка';
             currentExpression = '';
